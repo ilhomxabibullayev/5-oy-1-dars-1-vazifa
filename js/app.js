@@ -6,13 +6,34 @@ const filteredArr = arr.filter(Boolean);
 
 console.log(filteredArr);
 
+const arr2 = [0, "apple", false, "", "banana", NaN, 42];
+
+function filterTruthyValues(array) {
+    return array.filter(item => Boolean(item));
+}
+
+const filteredArr2 = filterTruthyValues(arr);
+
+console.log(filteredArr2);
+
 // 3 masala
 
-const numbers = [3, 1, 4, 1, 5, 9, 2, 6];
+const numbers2 = [3, 1, 4, 1, 5, 9, 2, 6];
 
 const uniqueNumbers = [...new Set(numbers)].sort((a, b) => b - a);
 
-const secondLargest = uniqueNumbers[1];
+const secondLargest2 = uniqueNumbers[1];
+
+console.log(secondLargest2);
+
+const numbers = [3, 1, 4, 1, 5, 9, 2, 6];
+
+function findSecondLargest(array) {
+    const uniqueNumbers = [...new Set(array)].sort((a, b) => b - a);
+    return uniqueNumbers[1];
+}
+
+const secondLargest = findSecondLargest(numbers);
 
 console.log(secondLargest);
 
@@ -54,3 +75,19 @@ const names = people.map(person => person.name);
 const ages = people.map(person => person.age);
 
 console.log(names, ages);
+
+const people2 = [
+    { name: "John", age: 30 },
+    { name: "Jane", age: 25 },
+    { name: "Jack", age: 20 }
+];
+
+function extractNamesAndAges(array) {
+    const names2 = array.map(person => person.name);
+    const ages2 = array.map(person => person.age);
+    return { names2, ages2 };
+}
+
+const { names2, ages2 } = extractNamesAndAges(people2);
+
+console.log(names2, ages2);
