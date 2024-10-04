@@ -20,7 +20,7 @@ console.log(filteredArr2);
 
 const numbers2 = [3, 1, 4, 1, 5, 9, 2, 6];
 
-const uniqueNumbers = [...new Set(numbers)].sort((a, b) => b - a);
+const uniqueNumbers = [...new Set(numbers2)].sort((a, b) => b - a);
 
 const secondLargest2 = uniqueNumbers[1];
 
